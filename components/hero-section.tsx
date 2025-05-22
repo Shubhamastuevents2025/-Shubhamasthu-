@@ -225,7 +225,7 @@ export default function HeroSection() {
             className="relative bg-gold-gradient text-royal-950 hover:shadow-lg hover:shadow-gold-500/20 text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-6 rounded-full group overflow-hidden"
             asChild
           >
-            <Link href="#service">
+            <Link href="#services">
               <span className="relative z-10 font-semibold">View our services</span>
               <motion.span
                 className="absolute inset-0 bg-white/20 z-0"
