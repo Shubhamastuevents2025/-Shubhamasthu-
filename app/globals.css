@@ -1,0 +1,329 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --royal-900: #102a43; /* Navy blue */
+  --royal-800: #243b53;
+  --royal-700: #334e68;
+  --royal-600: #486581;
+  --royal-500: #627d98;
+  --royal-400: #829ab1;
+  --royal-300: #9fb3c8;
+  --royal-200: #bcccdc;
+  --royal-100: #d9e2ec;
+  --royal-50: #f0f4f8;
+  --royal-950: #0a1929; /* Darker navy */
+  --royal-990: #000000; /* Black */
+
+  --gold-900: #8b6914;
+  --gold-800: #a67c00;
+  --gold-700: #c19100;
+  --gold-600: #d4af37;
+  --gold-500: #ffd700;
+  --gold-400: #ffdf33;
+  --gold-300: #ffe666;
+  --gold-200: #ffed99;
+  --gold-100: #fff4cc;
+  --gold-50: #fffaeb;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  background-color: var(--royal-50);
+  color: var(--royal-900);
+}
+
+.royal-text {
+  background: linear-gradient(90deg, #d4af37 0%, #f9d423 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.gold-gradient {
+  background: linear-gradient(to right, var(--gold-600), var(--gold-500));
+}
+
+.royal-gradient {
+  background: linear-gradient(to right, var(--royal-900), var(--royal-950));
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(90deg, #d4af37 0%, #f9d423 50%, #d4af37 100%);
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(to right, var(--gold-600), var(--gold-500)) 1;
+}
+
+/* Royal animations */
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.3) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pulse {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Royal hover effect */
+.royal-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.royal-hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.2) 50%, transparent 100%);
+  transition: left 0.5s ease;
+}
+
+.royal-hover:hover::after {
+  left: 100%;
+}
+
+/* Gold border utility */
+.gold-border {
+  position: relative;
+}
+
+.gold-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #d4af37 0%, #f9d423 50%, #d4af37 100%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Mobile text stability */
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+    font-size: 90%;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Reduce container padding on mobile */
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  /* Make images smaller on mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust spacing for mobile */
+  .py-16,
+  .py-24 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .mb-12 {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Ensure footer alignment on mobile */
+  footer .flex-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .md\:text-left {
+    text-align: center;
+  }
+
+  footer .md\:items-start {
+    align-items: center;
+  }
+}
+
+/* Ensure cursor effects are visible */
+body {
+  cursor: none;
+}
+
+/* Only show default cursor on interactive elements */
+a,
+button,
+input,
+textarea,
+select,
+[role="button"],
+[tabindex="0"] {
+  cursor: pointer;
+}
+
+/* Make sure cursor effects have high z-index */
+.cursor-effects {
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+}
