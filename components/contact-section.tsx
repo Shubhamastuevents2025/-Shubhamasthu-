@@ -22,7 +22,7 @@ export default function ContactSection() {
     const form = e.target as HTMLFormElement
     const formData = new FormData(form)
 
-    formData.append("access_key", "54dec43e-b0c0-4c12-ba96-a8f2cc34d864 ") // Replace with your Web3Forms access key
+    formData.append("access_key", "54dec43e-b0c0-4c12-ba96-a8f2cc34d864") // Replace with your Web3Forms access key
     formData.append("from_name", "Shubhamastu") // 👈 ADD THIS LINE
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
