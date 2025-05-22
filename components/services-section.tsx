@@ -70,7 +70,7 @@ export default function ServicesSection() {
     },
     {
       id: "School Events",
-      title: "School",
+      title: "School & College Events",
       icon: <GraduationCap className="h-6 w-6" />,
       description: "Create memorable academic events with our specialized planning services.",
       image: "/treatments/School.avif",

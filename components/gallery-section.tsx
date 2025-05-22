@@ -6,11 +6,11 @@ import { motion, useInView } from "framer-motion"
 import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react"
 
 const galleryCategories = [
-  { id: "all", name: "All" },
-  { id: "weddings", name: "Weddings" },
-  { id: "birthdays", name: "Birthdays" },
-  { id: "corporate", name: "Corporate" },
-  { id: "school", name: "School Events" },
+  // { id: "all", name: "All" },
+  // { id: "weddings", name: "Weddings" },
+  // { id: "birthdays", name: "Birthdays" },
+  // { id: "corporate", name: "Corporate" },
+  // { id: "School & College Events", name: "School Events" },
 ]
 
 const galleryImages = [
@@ -35,7 +35,7 @@ const galleryImages = [
   {
     src: "/treatments/school1.jpg",
     alt: "School annual day cultural performance",
-    category: "school",
+    category: "School & College Events",
     size: "medium",
   },
   {
@@ -59,7 +59,7 @@ const galleryImages = [
   {
     src: "/treatments/School.avif",
     alt: "School Annual day Celebration",
-    category: "school",
+    category: "School & College Events",
     size: "medium",
   },
 ]
